@@ -43,7 +43,7 @@ const encabezado=`            <nav class="navbar navbar-expand-lg bg-body-tertia
 
 const pieDePagina=`            <div class="redes">
 <a href="https://www.facebook.com/pccenterargentina/?locale=es_LA" target="_blank" title="Facebook"><i class="fa-brands fa-square-facebook"></i></a>
-<a href="http://www.twitter.com/pccenterweb?lang=es" target="_blank" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
+<a href="http://www.twitter.com/pccenterweb?lang=es" target="_blank" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
 <a href="http://www.instagram.com/pccentercomputers/?hl=es" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
 </div>
 <div id="copyright">
