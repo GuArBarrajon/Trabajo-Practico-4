@@ -1,3 +1,13 @@
+//función para hacer que la pestaña actual tenga un formato distinto
+function ventanaActiva(nombrePagina) {
+    let urlPagina = window.document.URL;   //se asigna el url de la página actual a un variable
+    if (urlPagina.includes(nombrePagina)){ //se compara para ver si el url contiene el string del parámetro recibido 
+        return "nav-menu-link-active"
+    }
+}
+
+/*Declaración del encabezado, pie de página y publicidad como strings para luego cargarlos con JS. 
+El encabezado contiene la función interpolada para que agregue la clase que da formato a la pestaña actual*/
 const encabezado=`            <nav class="navbar navbar-expand-lg bg-body-tertiary">
 <div class="container-fluid" id="header">
     <h1>PC<span>C</span>enter</h1>
@@ -7,22 +17,22 @@ const encabezado=`            <nav class="navbar navbar-expand-lg bg-body-tertia
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                <a class="nav-link ${ventanaActiva("index")}" aria-current="page" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="productos.html">Productos</a>
+                <a class="nav-link ${ventanaActiva("productos")}" href="productos.html">Productos</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="servicios.html">Servicios</a>
+                <a class="nav-link ${ventanaActiva("servicios")}" href="servicios.html">Servicios</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="compras.html">Compras</a>
+                <a class="nav-link ${ventanaActiva("compras")}" href="compras.html">Compras</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="usuario.html">Usuario</a>
+                <a class="nav-link ${ventanaActiva("usuario")}" href="usuario.html">Usuario</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="contacto.html">Contacto</a>
+                <a class="nav-link ${ventanaActiva("contacto")}" href="contacto.html">Contacto</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -106,6 +116,7 @@ const promociones=`                <div class="promociones">
 </div>
 </div>`;
 
+//Se asignan los strings con declaraciones html anteriores a su respectivo contenedor dentro del documento html
 document.getElementById("cabeza").innerHTML=encabezado;
 document.getElementById("pie").innerHTML=pieDePagina;
 document.getElementById("promos").innerHTML=promociones;
