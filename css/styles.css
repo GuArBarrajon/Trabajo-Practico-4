@@ -232,7 +232,8 @@ div > h2:hover {
 
 .boton_comprar {
     position: relative;
-    left: 12rem;
+    /* left: 12rem; */
+    left: 60%;
     bottom: 3.5rem;
     font-size: 2rem;
     border-radius: 20%;
@@ -412,4 +413,17 @@ como parte de la experimentación*/
     .sectionGrid {
         grid-template-columns: 85%;
     }
+}
+/*aside => carrito*/
+.carrito{
+    margin: 1rem 0px 1rem 0px;
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5%;
+    overflow: hidden;
+}
+#boton-vaciar{
+    left: 1rem;
+    bottom: 0.5rem;
+    position: relative;
 }

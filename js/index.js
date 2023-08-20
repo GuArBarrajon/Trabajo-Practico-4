@@ -1,14 +1,15 @@
 //función para hacer que la pestaña actual tenga un formato distinto
 function ventanaActiva(nombrePagina) {
-    let urlPagina = window.document.URL;   //se asigna el url de la página actual a un variable
-    if (urlPagina.includes(nombrePagina)){ //se compara para ver si el url contiene el string del parámetro recibido 
-        return "nav-menu-link-active"
-    }
+  let urlPagina = window.document.URL; //se asigna el url de la página actual a un variable
+  if (urlPagina.includes(nombrePagina)) {
+    //se compara para ver si el url contiene el string del parámetro recibido
+    return "nav-menu-link-active";
+  }
 }
 
 /*Declaración del encabezado, pie de página y publicidad como strings para luego cargarlos con JS. 
 El encabezado contiene la función interpolada para que agregue la clase que da formato a la pestaña actual*/
-const encabezado=`            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+const encabezado = `            <nav class="navbar navbar-expand-lg bg-body-tertiary">
 <div class="container-fluid" id="header">
     <h1>PC<span>C</span>enter</h1>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,23 +18,40 @@ const encabezado=`            <nav class="navbar navbar-expand-lg bg-body-tertia
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-                <a class="nav-link ${ventanaActiva("index")}" aria-current="page" href="index.html">Home</a>
+                <a class="nav-link ${ventanaActiva(
+                  "index"
+                )}" aria-current="page" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link ${ventanaActiva("productos")}" href="productos.html">Productos</a>
+                <a class="nav-link ${ventanaActiva(
+                  "productos"
+                )}" href="productos.html">Productos</a>
+            </li>        
+            <li class="nav-item">
+        <a class="nav-link ${ventanaActiva(
+          "carrito"
+        )}" href="test_carrito.html">Carrito</a>
+    </li>
+            <li class="nav-item">
+                <a class="nav-link ${ventanaActiva(
+                  "servicios"
+                )}" href="servicios.html">Servicios</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link ${ventanaActiva("servicios")}" href="servicios.html">Servicios</a>
+                <a class="nav-link ${ventanaActiva(
+                  "compras"
+                )}" href="compras.html">Compras</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link ${ventanaActiva("compras")}" href="compras.html">Compras</a>
+                <a class="nav-link ${ventanaActiva(
+                  "usuario"
+                )}" href="usuario.html">Usuario</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link ${ventanaActiva("usuario")}" href="usuario.html">Usuario</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link ${ventanaActiva("contacto")}" href="contacto.html">Contacto</a>
-            </li>
+                <a class="nav-link ${ventanaActiva(
+                  "contacto"
+                )}" href="contacto.html">Contacto</a>
+
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Descargas
@@ -51,7 +69,7 @@ const encabezado=`            <nav class="navbar navbar-expand-lg bg-body-tertia
 </div>
 </nav>`;
 
-const pieDePagina=`            <div class="redes">
+const pieDePagina = `            <div class="redes">
 <a href="https://www.facebook.com/pccenterargentina/?locale=es_LA" target="_blank" title="Facebook"><i class="fa-brands fa-square-facebook"></i></a>
 <a href="http://www.twitter.com/pccenterweb?lang=es" target="_blank" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
 <a href="http://www.instagram.com/pccentercomputers/?hl=es" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
@@ -60,7 +78,7 @@ const pieDePagina=`            <div class="redes">
 <p>Copyright © 2023 - PCCenter - Todos los derechos reservados</p>
 </div>`;
 
-const promociones=`                <div class="promociones">
+const promociones = `                <div class="promociones">
 <ul class="marcas">
     <li><img src="imagenes/logo1.png" alt="marca" class="logo"></li>
     <li><img src="imagenes/logo2.png" alt="marca" class="logo"></li>
@@ -117,6 +135,6 @@ const promociones=`                <div class="promociones">
 </div>`;
 
 //Se asignan los strings con declaraciones html anteriores a su respectivo contenedor dentro del documento html
-document.getElementById("cabeza").innerHTML=encabezado;
-document.getElementById("pie").innerHTML=pieDePagina;
-document.getElementById("promos").innerHTML=promociones;
+document.getElementById("cabeza").innerHTML = encabezado;
+document.getElementById("pie").innerHTML = pieDePagina;
+document.getElementById("promos").innerHTML = promociones;
