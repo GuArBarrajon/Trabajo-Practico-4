@@ -189,6 +189,7 @@ th, td {
 }
 
 h2 {text-align: center;}
+h3 {text-align: center;}
 
 div > h2 {transition: all 1s linear 0.5s;}
 
@@ -267,6 +268,8 @@ article:hover > .boton_comprar {
     color: black;
     transition: color 1s linear 0.5s;
 }
+
+.boton {text-decoration: none}
 
 .links:hover {
     color: white;

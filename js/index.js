@@ -31,17 +31,9 @@ const encabezado = `            <nav class="navbar navbar-expand-lg bg-body-tert
             </li>
             <li class="nav-item">
                 <a class="nav-link ${ventanaActiva("contacto")}" href="contacto.html">Contacto</a>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Descargas
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="Informe/Informe.docx">Informe</a></li>
-                    <li><a class="dropdown-item" href="https://github.com/GuArBarrajon/Trabajo-Practico-4" target="_blank">Código</a></li>
-                    <li><a class="dropdown-item" href="Videos/video1.mp4" target="_blank">Video 1</a></li>
-                    <li><a class="dropdown-item" href="Videos/Video2.mp4" target="_blank">Video 2</a></li>
-                    <li><a class="dropdown-item" href="Videos/video3.mp4" target="_blank">Video 3</a></li>
-                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="descargas.html" target="_blank">Descargas</a>
             </li>
         </ul>
     </div>
